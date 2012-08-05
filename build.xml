@@ -1,0 +1,36 @@
+<project name="cacophony" default="main" basedir=".">
+    <property name="build.dir" value="scratch"/>
+    <property name="source.dir" value="src/main"/>
+    <property name="demo.dir" value="src/demo"/>
+    <property name="classes.dir" value="${build.dir}/classes" />
+    <property name="jar.dir" value="${build.dir}/jar" />
+    <property name="main.class" value="dsq.demo.Main"/>
+    <property name="resources.dir" value="resources"/>
+
+    <target name="clean">
+        <deltree dir="${classes.dir}" />
+        <deltree dir="${jar.dir}" />
+    </target>
+    <target name="prepare" depends="clean">
+        <mkdir dir="${classes.dir}" />
+        <mkdir dir="${jar.dir}" />
+    </target>
+    <target name="compile" depends="prepare">
+        <javac srcdir="${source.dir}" destdir="${classes.dir}" />
+        <javac srcdir="${demo.dir}" destdir="${classes.dir}" />
+    </target>
+
+    <target name="jar" depends="compile">
+        <jar destfile="${jar.dir}/${ant.project.name}.jar">
+            <fileset dir="${classes.dir}"/>
+            <fileset dir="${resources.dir}"/>
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="main" depends="jar">
+        <java jar="${jar.dir}/${ant.project.name}.jar" fork="true"/>
+    </target>
+</project>

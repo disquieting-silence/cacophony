@@ -1,0 +1,38 @@
+Insert mode (Before and After)                      [I]
+Select-first                                        [`]
+Group Select                                        [Shift+Space]
+Multi-Select                                        [Ctrl+Space]
+Cut, Copy, Paste                                    [Ctrl+X, Ctrl+C, Ctrl+V]
+Play                                                [Enter]
+Pause / Resume                                      [P]
+Stop                                                [S]
+Reset                                               [T]
+Move note up                                        [Up]
+Move note down                                      [Down]
+Octave up / down                                    [Shift+Up, Shift+Down]
+Increase / Decrease duration                        [J/K, Ctrl+J,Ctrl+K]
+Add / Remove note from chord                        [Delete when selected, or add a new]
+Cycle through notes on chord                        [<,>]
+replace note                                        [R]
+Delete note                                         [Delete]
+move selection left right                           [Left, Right]
+move selection bar                                  [Shift+Left, Shift+Right]
+switch channels                                     [shift+Number]
+switch view                                         [Tab]
+change instrument                                   [Ctrl+I]
+help                                                [F1]
+scroll up / down                                    [PgUp, PgDn]
+increase / decrease tempo ?                         [*, /]
+add dot                                             [.]
+deselect all                                        [ESCAPE]
+open file                                           [Ctrl+O]
+save file                                           [Ctrl+S]
+save as file                                        [Ctrl+F]?
+new                                                 [Ctrl+N]
+command mode?
+Select all                                          [Ctrl+A]
+Keys:                                               A..G (not sure about sharps ... simplication)
+Add rest:                                           ????
+
+Change duration of next note:                       Ctrl + change duration
+Change octave of next note:                         Ctrl + change octave
